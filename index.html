@@ -8,10 +8,10 @@
    <meta name="x-apple-disable-message-reformatting">
    <meta name="color-scheme" content="light dark">
    <meta name="supported-color-schemes" content="light dark">
+	<title>HTML Email Template Project</title>
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-	<title>Password Reset Email</title>
+   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
    <!--[if mso]>
       <noscript>
          <xml>
@@ -35,17 +35,27 @@
       img {
          border: 0;
       }
-
       a {
-         color: #0C6239;
+         text-decoration: none;
+         color: #e8fbfa;
+         font-size: 16px;
       }
-      a:hover {
-         color: #000;
-      }
-
       .content {
          line-height: 20px;
          font-size: 16px;
+      }
+
+      .link-corr {
+         text-decoration: none;
+         color: #000 !important;
+      }
+
+      span.Object {
+         color: inherit !important;
+      }
+      span.Object-hover {
+         color: inherit !important;
+         text-decoration:none !important;
       }
 
       u + .body .gmail-blend-screen { background:#000; mix-blend-mode:screen; }
@@ -54,7 +64,6 @@
       .ExternalClass {
          width: 100%;
       }
-
 		.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
          line-height: 100%;
       }
@@ -64,19 +73,82 @@
          text-decoration: inherit !important;
       }
 
-      span.Object {
-         color: inherit !important;
-      }
-      span.Object-hover {
-         color: inherit !important;
-         text-decoration: none !important;
+      .button {
+         font-size: 17px;
+         font-weight: bold;
+         text-decoration: none;
+         color: #000;
+         background-color: #fff;
+         padding: 12px 20px;
+         border: none;
+         border-radius: 2px;
+         display: inline-block;
+         box-shadow: 5px 5px 10px black;
+            }
+
+      .coloured-back {
+         background-color: #F26622; 
       }
 
       @media screen and (max-width: 599.98px) {
-
+         .banner {
+            height: auto !important;
+            padding: 40px 0 60px !important;
+         }
+         .column-wrapper .padding {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+         }
+         .column-wrapper .column,
+         .column-wrapper .column img {
+            width: 100% !important;
+            height: auto;
+            max-width: 100% !important;
+         }
+         .column-wrapper {
+            padding: 0 75px !important;
+         }
+         .column-one-third img.one-third-col-img {
+            max-width: 60% !important;
+            padding-top: 15px !important;
+            background-color: transparent !important;
+         }
+         .column-two-third .content {
+            text-align: center !important;
+         }
+         .column-two-third {
+            padding-bottom: 30px !important;
+            background-color: transparent !important;
+         }
+         .column-wrapper .column-one-fourth {
+            width: 150px !important;
+            max-width: 150px !important;
+         }
+         .column-one-fourth .content img {
+            max-width: 120px !important;
+         }
+         .coloured-back.reverse-cell {
+            background-color: #000 !important;
+         }
+      }
+      @media screen and (max-width: 499.98px) {
+         .banner {
+            padding: 25px 0 50px !important;
+         }
+         .column-wrapper {
+            padding: 0 45px !important;
+         }
+         .coloured-back.reverse-cell {
+            background-color: #000 !important;
+         }
       }
       @media screen and (max-width: 399.98px) {
-
+         .banner {
+            padding: 10px 0 40px !important;
+         }
+         .column-wrapper {
+            padding: 0 20px !important;
+         }
       }
 
       :root {
@@ -84,36 +156,47 @@
          supported-color-schemes: light dark;
       }
       @media (prefers-color-scheme: dark) {
-         body, table {
+         body, table, .darkmode-bg {
             background: #2d2d2d !important;
             color: #ffffff !important;
          }
-         [data-ogsc] body, table {
+         [data-ogsc] body, table, .darkmode-bg {
             background: #2d2d2d !important;
             color: #ffffff !important;
+         }
+         .darkmode-transparent {
+            background-color: transparent !important;
+         }
+         [data-ogsc] .darkmode-transparent {
+            background-color: transparent !important;
          }
       }
 
+      @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
    </style>
-   
+
 	<!--[if mso]>
 		<style type="text/css">
 			body {background-color: #dde0e1 !important;}
-         body, table, td, p, a {font-family: "Open Sans", sans-serif; !important;}
+         body, table, td, p, a {font-family: 'Lato', Arial, Helvetica, sans-serif !important;}
          table {border-spacing: 0 !important;border-collapse: collapse !important;}
 		</style>
 	<![endif]-->
 	
 </head>
-<body class="body" xml:lang="en" style="margin:0;padding:0;min-width:100%;background-color:#dde0e1;">
+<body class="body" xml:lang="en" style="margin:0;padding:0;min-width:100%;background-color:#141414;">
 
-   <div style="width: 100%; table-layout:fixed; background-color: #dde0e1; color:#242424; font-family: 'Open Sans', sans-serif;; font-size: 16px; margin: 0 auto 40px;">
-      <div style="max-width: 600px; background-color: #fafdfe; color:#242424; font-family: 'Open Sans', sans-serif; font-size: 16px; box-shadow: 0 0 10px rgba(0, 0, 0, .2);margin: 0 auto;">
+   <div style="width: 100%; table-layout:fixed; background-color: #555; color:#fff; font-family: 'Lato', Arial, Helvetica, sans-serif; font-size: 16px; margin: 0 auto 40px;">
+      <div style="max-width: 600px; background-color: #141414; color:#fff; font-family: 'Lato', Arial, Helvetica, sans-serif; font-size: 16px; box-shadow: 0 0 10px rgba(0, 0, 0, .2);margin: 0 auto;">
 
+         <!-- Preheader (remove comment) -->
          <div style="font-size: 0px; color: #fafdfe; mso-line-height-rule: exactly; line-height: 0px; display: none; max-width: 0px; max-height: 0px; opacity: 0; overflow: hidden; mso-hide:all;">
-            Reset your password!
+            This is our preheader text which can be 35-190 characters but 85-100 is recommended.
+            <!-- Add Preheader Text Here (85-100 characters in length) -->
             &zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;
          </div>
+         <!-- End Preheader (remove comment) -->
       
          <!--[if mso]>
             <table width="600" align="center" style="border-spacing: 0; border-collapse:collapse; color: #3d3d3d;" role="presentation">
@@ -121,66 +204,862 @@
             <td style="padding:0;">
          <![endif]-->
 
-         <table align="center" style="border-spacing:0; border-collapse: collapse; color:#242424; font-family: 'Open Sans', sans-serif; font-size: 16px; background-color: #fafdfe; margin: 0 auto; padding:0; width: 100%; max-width: 600px;" role="presentation">
+         <table align="center" style="border-spacing:0; border-collapse: collapse; color:#fff; font-family: 'Lato', Arial, Helvetica, sans-serif; font-size: 16px; background-color: #141414; margin: 0 auto; padding:0; width: 100%; max-width: 600px;" role="presentation">
 
-
+<!-- START LOGO -->
             <tr>
                <td style="padding: 0;">
                   <table width="100%" style="border-spacing: 0;" role="presentation">
-
+                  
                      <tr>
-                        <td style="padding: 14px 0 10px 0; text-align: center; background-color: #0C6239;">
-                           <a href="https://example.com" target="_blank">
-                              <img src="images/logo.png" width="160" alt="Logo" style="border: 0;">
+                        <td class="darkmode-bg" style="background-color: #000; padding: 10px 0 0 0; line-height: 0;">
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="darkmode-bg" style="background-color: #F26622; padding: 0; line-height: 0;">
+                           <a href="https://example.com/6" target="_blank">
+                              <img src="images/massif-logo.jpg" alt="Logo" title="Logo" width="308" style="border: 0;">
                            </a>
                         </td>
                      </tr>
-
-                     <tr>
-                        <td style="padding: 0; line-height: 0;">
-                           <a href="https://example.com/1" target="_blank">
-                              <img src="images/forgot-passwrd-img.png" alt="Password Reset Banner" width="600" style="border: 0; width: 100%;">
-                           </a>
-                           <br />
-                           <img src="images/no-panic.jpg" alt="No need to panic" title="No need to panic">
-                        </td>
-                     </tr>
-
-                     <tr>
-                        <td style="padding: 0 30px 10px 30px; text-align: center; background-color: #ede8d3;">
-                           <p style="font-size: 16px; line-height: 20px;">Hi, {{contact.FIRSTNAME}}!</p>
-                           <p style="font-size: 16px; line-height: 20px;">There was a request to change your password!</p>
-                           <p style="font-size: 16px; line-height: 20px;">If you did not make this request, just ignore this email. Otherwise, please click the button below to change your password:</p>
-                        </td>
-                     </tr>
-
-                     <tr>
-                        <td style="padding: 0; position: relative; text-align: center;">
-                           <a href="https://example.com/3" target="_blank">
-                              <img src="images/reset-but.jpg" alt="Reset Your Password" title="Reset Your Password" width="600" style="border: 0;">
-                           </a>
-                        </td>
-                     </tr>
-
-                     <tr>
-                        <td style="padding: 10px 0 30px 0; text-align: center;">
-                           <p style="font-size: 16px;color: #000;"><a href="https://example.com/4" style=" text-decoration: none; font-weight: bold;">www.younique.com</a></p>
-                           <p style="font-size: 16px; padding: 5px 0 5px 0; color: #000;">123&#8203; Street Road, City, State 55555</p>
-                           <p style="font-size: 14px; color: #000;"><a href="https://example.com/5" style=" text-decoration: none; font-weight: bold;">Subscriber</a> | <a href="https://example.com/5" style="text-decoration: none; font-weight: bold;">Preferences</a></p>
-                        </td>
-                     </tr>
-
+                  
                   </table>
                </td>
             </tr>
+<!-- END LOGO -->
+
+
+<!-- START BANNER -->
+            <tr>
+               <td class="banner" width="600" height="332" style="background-color: #141414; text-align: center; padding-top: 30px; max-width: 100%;">
+
+                 <img src="images/winter-is-coming-hero-image.png" alt="Winter is coming" title="Winter is coming" width="540" style="max-width: 100%;">
+
+               </td>
+
+            </tr>
+
+            <tr>
+               <td align="center" style="padding: 10px 10px 35px;">
+                  <h1 style="font-size: 30px; line-height: 30px; color: #ffffff;margin: 0;">Responsive HTML Email Template</h1>
+               </td>
+            </tr>
+            <tr>
+               <td align="center" style="border-radius: 10px; padding-bottom: 40px;">
+                  <a class="link-corr button" href="https://example.com/7" target="_blank">VIEW DEMO</a>
+               </td>
+
+            </tr>
+         </table>
+
+      </td>
+   </tr>
+<!-- END BANNER -->
+
+
+<!-- START TWO COLUMNS FIRST ROW -->
+            <tr>
+               <td style="padding: 35px 0 30px;">
+                  <table width="100%" style="border-spacing: 0;" role="presentation">
+                     <tr>
+                        <td class="column-wrapper" style="padding: 0; font-size: 0; text-align: center;">
+
+                           <!--[if mso]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="300" valign="top" style="padding: 0;">
+                           <![endif]-->
+
+                           <table class="column column-one-half image-back" style="border-spacing: 0; vertical-align: top; width: 100%;max-width: 300px; display: inline-block; height: 80vh; background-image: url(images/new-winter-season-man.png); background-size: 100%;" role="presentation">
+                              <tr>
+                                 <td class="padding" style="padding: 0;">
+
+                                    <table class="content" style="border-spacing: 0; " role="presentation">
+                                       <tr>
+                                          <td>
+
+                                             <a href="https://example.com/8" target="_blank" style="mso-hide: all;">
+                                               <!--[if mso]>
+                                                <v:image src="images/new-winter-season-man.png" style="width: 450pt; height: 332pt;">
+                                                </v:image>
+                                             <![endif]-->
+                                             </a>
+                                          </td>
+                                       </tr>
+
+                                    </table>
+
+                                 </td>
+                              </tr>
+                           </table>
+
+                           <!--[if mso]>
+                           </td><td width="300" valign="top" style="padding: 0;">
+                           <![endif]-->
+
+                           <table class="column column-one-half coloured-back" style="border-spacing: 0; vertical-align: top; width: 100%;max-width: 300px; display: inline-block; height: 80vh" role="presentation">
+                              <tr>
+                                 <td class="padding" style="padding: 20px;">
+
+                                    <table class="content" style="border-spacing: 0;" role="presentation">
+
+                                       <tr>
+                                          <td style="padding: 20px 0 10px 10px;">
+                                             <h2 style="font-size: 24px; font-weight: bold; text-transform: capitalize; margin: 0; line-height: 34px;">New winter season wear coming!</h2>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td style="padding: 10px 0 20px 10px;">
+                                             <p style="font-size: 15px;margin: 0; text-align: left;">Create Responsive HTML Email Templates that you can build around to master email development.</p>
+                                             <p style="font-size: 15px;margin: 0; text-align: left;">Create Responsive HTML Email Templates that you can build around to master email development.</p>
+                                             <p style="font-size: 15px;margin: 0; text-align: left;">Create Responsive HTML Email Templates that you can build around to master email development.</p>
+                                             <p style="font-size: 15px;margin: 0; text-align: left;">Create Responsive HTML Email Templates that you can build around to master email development.</p>
+                                     
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td align="left" style="padding-left: 10px;">
+                                             <table align="left" style="border-spacing: 0;" role="presentation">
+                                                <tr>
+
+                                                   <td align="left">
+
+                                                      <!--[if mso]>
+                                                         <v:roundrect
+                                                            xmlns_v="urn:schemas-microsoft-com:vml"
+                                                            xmlns_w="urn:schemas-microsoft-com:office:word" href="https://example.com/11" style="height: 32.5pt; width: 101.3pt; v-text-anchor: middle;" arcsize="14%" strokecolor="#1e5d7b" fillcolor="#ffffff">
+                                                            <w:anchorlock/>
+                                                            <center style="color: #000000; font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 600;">Get Started</center>
+                                                         </v:roundrect>
+                                                      <![endif]-->
+   
+                                                         <a href="https://example.com/11" class="button" target="_blank" style=" mso-hide: all;">
+                                                            Get Started
+                                                         </a>
+                                                      </td>
+
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+
+                                 </td>
+                              </tr>
+                           </table>
+
+                           <!--[if mso]>
+                              </td>
+                              </tr>
+                              </table>
+                           <![endif]-->
+
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+<!-- END TWO COLUMNS -->
+
+
+<!-- START TWO SECOND COLUMNS -->
+<tr>
+   <td style="padding: 35px 0 30px;">
+      <table width="100%" style="border-spacing: 0;" role="presentation">
+         <tr>
+            <td class="column-wrapper" style="padding: 0; font-size: 0; text-align: center;">
+
+                  <!--[if mso]>
+                  <table width="100%" style="border-spacing: 0;" role="presentation">
+                  <tr>
+                  <td width="300" valign="top" style="padding: 0;">
+               <![endif]-->
+
+               <table class="column column-one-half coloured-back reverse-cell" style="border-spacing: 0; vertical-align: top; width: 100%;max-width: 300px; display: inline-block; height: 80vh;" role="presentation">
+                  <tr>
+                     <td class="padding" style="padding: 20px;">
+
+                        <table class="content" style="border-spacing: 0;" role="presentation">
+
+                           <tr>
+                              <td style="padding: 20px 0 10px 10px;">
+                                 <h2 style="font-size: 24px; font-weight: bold; text-transform: capitalize; margin: 0; line-height: 34px;">New winter season wear coming!</h2>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="padding: 10px 0 20px 10px;">
+                                 <p style="font-size: 15px;margin: 0; text-align: left;">Create Responsive HTML Email Templates that you can build around to master email development.</p>
+                                 <p style="font-size: 15px;margin: 0; text-align: left;">Create Responsive HTML Email Templates that you can build around to master email development.</p>
+                                 <p style="font-size: 15px;margin: 0; text-align: left;">Create Responsive HTML Email Templates that you can build around to master email development.</p>
+                                 <p style="font-size: 15px;margin: 0; text-align: left;">Create Responsive HTML Email Templates that you can build around to master email development.</p>
+                         
+                              </td>
+                           </tr>
+                           <tr>
+                              <td align="left" style="padding-left: 10px;">
+                                 <table align="left" style="border-spacing: 0;" role="presentation">
+                                    <tr>
+
+                                       <td align="left">
+
+                                          <!--[if mso]>
+                                             <v:roundrect
+                                                xmlns_v="urn:schemas-microsoft-com:vml"
+                                                xmlns_w="urn:schemas-microsoft-com:office:word" href="https://example.com/11" style="height: 32.5pt; width: 101.3pt; v-text-anchor: middle;" arcsize="14%" strokecolor="#1e5d7b" fillcolor="#ffffff">
+                                                <w:anchorlock/>
+                                                <center style="color: #000000; font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 600;">Get Started</center>
+                                             </v:roundrect>
+                                          <![endif]-->
+
+                                             <a href="https://example.com/11" class="button" target="_blank" style=" mso-hide: all;">
+                                                Get Started
+                                             </a>
+                                          </td>
+
+                                    </tr>
+                                 </table>
+                              </td>
+                           </tr>
+                        </table>
+
+                     </td>
+                  </tr>
+               </table>
+
+               
+               <table class="column column-one-half image-back" style="border-spacing: 0; vertical-align: top; width: 100%;max-width: 300px; display: inline-block; height: 80vh; background-image: url(images/new-winter-season-woman.png); background-size: cover;" role="presentation">
+                  <tr>
+                     <td class="padding" style="padding: 0;">
+
+                        <table class="content" style="border-spacing: 0; " role="presentation">
+                           <tr>
+                              <td>
+
+                                 <a href="https://example.com/8" target="_blank" style="mso-hide: all;">
+                                   
+                                 </a>
+                              </td>
+                           </tr>
+
+                        </table>
+
+                     </td>
+                  </tr>
+               </table>
+
+               <!--[if mso]>
+               </td><td width="300" valign="top" style="padding: 0;">
+               <![endif]-->
+
+               <!--[if mso]>
+                  </td>
+                  </tr>
+                  </table>
+               <![endif]-->
+
+            </td>
+         </tr>
+      </table>
+   </td>
+</tr>
+<!-- END TWO COLUMNS -->
+
+<!-- START DISCOUNT SEC -->
+
+<tr>
+   <td style="padding: 35px 0 30px;">
+      <table width="100%" style="border-spacing: 0;" role="presentation">
+
+<tr>
+   <td class="banner" width="600" height="332" style="background-color: #141414; text-align: center; padding: 30px 0 30px 0;" >
+
+     <img src="images/50-off.png" alt="50 percent discount" title="50 percent discount" width="540" style="max-width: 100%;">
+
+   </td>
+
+</tr>
+
+</table>
+
+</td>
+</tr>
+<!-- END DISCOUNT SEC -->
+
+<!-- START TWO THIRDS COLUMNS -->
+            <tr>
+               <td style="padding: 10px 0 10px;">
+                  <table width="100%" style="border-spacing: 0;" role="presentation">
+                     <tr>
+                        <td style="padding: 1.4px; background: linear-gradient(#F26622, #F26622); background-color: #F26622;"></td>
+                     </tr>
+                     <tr>
+                        <td class="column-wrapper" style="padding: 0; font-size: 0; text-align: center; background: linear-gradient(#FB8A54, #FB8A54); background-color: #FB8A54;">
+
+                           <!--[if mso]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="200" valign="middle" style="padding: 0;">
+                           <![endif]-->
+
+                           <table class="column column-one-third" style="border-spacing: 0; vertical-align: middle; width: 100%;max-width: 200px; display: inline-block;" role="presentation">
+                              <tr>
+                                 <td class="padding" style="padding: 20px;background: linear-gradient(#FB8A54, #FB8A54); background-color: #FB8A54;">
+
+                                    <table class="content" style="border-spacing: 0; text-align: center;" role="presentation">
+                                       <tr>
+                                          <td style="background: linear-gradient(#FB8A54, #FB8A54); background-color: #FB8A54;">
+                                             <a href="https://example.com/12" target="_blank">
+                                                <img src="images/girl-in-hat.png" alt="Woman" class="one-third-col-img" width="160" style="max-width: 160px; border: 0;">
+                                             </a>
+                                          </td>
+                                       </tr>
+                                    </table>
+
+                                 </td>
+                              </tr>
+                           </table>
+
+                           <!--[if mso]>
+                           </td><td width="400" valign="middle" style="padding: 0;">
+                           <![endif]-->
+
+                           <table class="column column-two-third" style="border-spacing: 0; vertical-align: middle; width: 100%;max-width: 400px; display: inline-block;" role="presentation">
+                              <tr>
+                                 <td class="padding" style="padding: 0px; background: linear-gradient(#FB8A54, #FB8A54); background-color: #FB8A54;">
+
+                                    <table class="content" style="border-spacing: 0; text-align: left;" role="presentation">
+                                       <tr>
+                                          <td style="vertical-align: middle; padding: 0 10px; background: linear-gradient(#FB8A54, #FB8A54); background-color: #FB8A54;">
+                                             <div class="darkmode-transparent gmail-blend-screen">
+                                                <div class="darkmode-transparent gmail-blend-difference">
+                                                   <h3 style="font-size: 20px; line-height: 27px; color: #ffffff; letter-spacing: .2px; font-weight: 300; margin: 0;">"Always my one stop shop when it comes to winter or snow time wear."<br>-Leslie J.</h3>
+                                                </div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </table>
+
+                                 </td>
+                              </tr>
+                           </table>
+
+                           <!--[if mso]>
+                              </td>
+                              </tr>
+                              </table>
+                           <![endif]-->
+
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="padding: 1.4px; background: linear-gradient(#F26622, #F26622); background-color: #F26622;"></td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+<!-- END TWO THIRDS COLUMNS -->
+
+<!-- START BESTSELLER TITLE -->
+
+<tr>
+   <td style="padding: 35px 0 30px;">
+      <table width="100%" style="border-spacing: 0;" role="presentation">
+
+<tr>
+   <td align="center" style="padding: 30px 10px 35px;">
+      <h3 style="font-size: 30px; color: #ffffff;margin: 0;">Bestsellers</h3>
+   </td>
+</tr>
+<tr>
+   <td align="center" style="padding-bottom: 40px;">
+      <p>Shop for some of our bestsellers worldwide</p>
+   </td>
+
+</tr>
+</table>
+
+</td>
+</tr>
+<!-- END BESTSELLER TITLE -->
+
+
+<!-- START THREE COLUMNS -->
+            <tr>
+               <td style="padding: 25px 0 35px;">
+                  <table width="100%" style="border-spacing: 0;" role="presentation">
+                     <tr>
+                        <td class="column-wrapper" style="padding: 0; font-size: 0; text-align: center;">
+
+                           <!--[if mso]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="200" valign="top" style="padding: 0;">
+                           <![endif]-->
+
+                           <table class="column column-one-third" style="border-spacing: 0; vertical-align: top; width: 100%;max-width: 200px; display: inline-block;" role="presentation">
+                              <tr>
+                                 <td class="padding" style="padding: 20px 15px 30px 15px;">
+
+                                    <table class="content" style="border-spacing: 0; text-align: center;" role="presentation">
+                                       <tr>
+                                          <td>
+
+                                             <!--[if mso]>
+                                                <v:roundrect stroke="false" style="width:113pt; height:83pt;" arcsize="5%">
+                                                   <v:fill sizes="113pt,83pt" type="frame" src="images/transparent-jacket.png" href="https://example.com/13">
+                                                   <w:anchorlock/>
+                                                </v:roundrect>
+                                             <![endif]-->
+
+                                             <a href="https://example.com/13" target="_blank" style="mso-hide: all;">
+                                                <img src="images/transparent-jacket.png" alt="Newsletter" width="150" height="210" style="max-width: 150px; border-radius: 5px; border: 0;">
+                                             </a>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td style="padding: 20px 10px 10px;">
+                                             <h2 style="font-size: 17px; font-weight: bold; margin: 0;">THE BLACK BOMB</h2>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td style="padding: 10px 10px 25px 10px;">
+                                             <p style="font-size: 15px;margin: 0;">Classic black bomber jacket with fur collar slip on and inside lining.</p>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td align="center">
+                                             <table align="center" style="border-spacing: 0;" role="presentation">
+                                                <tr>
+
+                                                   <td align="center">
+
+                                                      <!--[if mso]>
+                                                         <v:roundrect
+                                                            xmlns_v="urn:schemas-microsoft-com:vml"
+                                                            xmlns_w="urn:schemas-microsoft-com:office:word" href="https://example.com/14" style="height: 28.5pt; width: 109.2pt; v-text-anchor: middle;" arcsize="14%" strokecolor="#dde0e1" fillcolor="#dde0e1">
+                                                            <w:anchorlock/>
+                                                            <center style="color: #1e5d7b; font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-weight: 600;">Email Audience</center>
+                                                         </v:roundrect>
+                                                      <![endif]-->
+
+                                                      <a class="link-corr button" href="https://example.com/14" target="_blank" style="font-size: 15px; font-weight: bold; text-decoration: none; display: inline-block; mso-hide: all;">
+                                                         BUY NOW
+                                                      </a>
+                                                   </td>
+
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+
+                                 </td>
+                              </tr>
+                           </table>
+
+                           <!--[if mso]>
+                           </td><td width="200" valign="top" style="padding: 0;">
+                           <![endif]-->
+
+                           <table class="column column-one-third" style="border-spacing: 0; vertical-align: top; width: 100%;max-width: 200px; display: inline-block;" role="presentation">
+                              <tr>
+                                 <td class="padding" style="padding: 20px 15px;">
+
+                                    <table class="content" style="border-spacing: 0; text-align: center;" role="presentation">
+                                       <tr>
+                                          <td>
+
+                                             <!--[if mso]>
+                                                <v:roundrect stroke="false" style="width:113pt; height:83pt;" arcsize="5%">
+                                                   <v:fill sizes="113pt,83pt" type="frame" src="images/winter-warm-jacket.png" href="http://example.com/15">
+                                                   <w:anchorlock/>
+                                                </v:roundrect>
+                                             <![endif]-->
+
+                                             <a href="https://example.com/15" target="_blank" style="mso-hide: all;">
+                                                <img src="images/winter-warm-jacket.png" alt="Ecommerce" width="150" height="210" style="max-width: 150px; border-radius: 5px; border: 0;">
+                                             </a>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td style="padding: 20px 10px 10px;">
+                                             <h2 style="font-size: 17px; font-weight: bold; margin: 0;">LADY'S WARMTH</h2>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td style="padding: 10px 10px 25px 10px;">
+                                             <p style="font-size: 15px;margin: 0;">Keep your feminine vibe while keeping warm with our lady's specials.</p>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td align="center">
+                                             <table align="center" style="border-spacing: 0;" role="presentation">
+                                                <tr>
+
+                                                   <td align="center">
+
+                                                      <!--[if mso]>
+                                                         <v:roundrect
+                                                            xmlns_v="urn:schemas-microsoft-com:vml"
+                                                            xmlns_w="urn:schemas-microsoft-com:office:word" href="https://example.com/16" style="height: 28.5pt; width: 93.5pt; v-text-anchor: middle;" arcsize="14%" strokecolor="#1e5d7b" fillcolor="#1e5d7b">
+                                                            <w:anchorlock/>
+                                                            <center style="color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-weight: 600;">Online Sales</center>
+                                                         </v:roundrect>
+                                                      <![endif]-->
+
+                                                      <a href="https://example.com/16" class="link-corr button" target="_blank" style="font-size: 15px; font-weight: bold; text-decoration: none; display: inline-block; mso-hide: all;">
+                                                         BUY NOW
+                                                      </a>
+                                                   </td>
+
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+
+                                 </td>
+                              </tr>
+                           </table>
+
+                           <!--[if mso]>
+                           </td><td width="200" valign="top" style="padding: 0;">
+                           <![endif]-->
+
+                           <table class="column column-one-third" style="border-spacing: 0; vertical-align: top; width: 100%;max-width: 200px; display: inline-block;" role="presentation">
+                              <tr>
+                                 <td class="padding" style="padding: 20px 15px;">
+
+                                    <table class="content" style="border-spacing: 0; text-align: center;" role="presentation">
+                                       <tr>
+                                          <td>
+
+                                             <!--[if mso]>
+                                                <v:roundrect stroke="false" style="width:113pt; height:83pt;" arcsize="5%">
+                                                   <v:fill sizes="113pt,83pt" type="frame" src="images/transparent-jacket-2.png" href="http://example.com/17">
+                                                   <w:anchorlock/>
+                                                </v:roundrect>
+                                             <![endif]-->
+
+                                             <a href="https://example.com/17" target="_blank" style="mso-hide: all;">
+                                                <img src="images/transparent-jacket-2.png" alt="Blogging" width="150" height="210" style="max-width: 150px; border-radius: 5px; border: 0;">
+                                             </a>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td style="padding: 20px 10px 10px;">
+                                             <h2 style="font-size: 17px; font-weight: bold; margin: 0;">TRENDS</h2>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td style="padding: 10px 10px 25px 10px;">
+                                             <p style="font-size: 15px;margin: 0;">Staying warm while keeping up with the trends has never been easier.</p>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td align="center">
+                                             <table align="center" style="border-spacing: 0;" role="presentation">
+                                                <tr>
+
+                                                   <td align="center">
+
+                                                      <!--[if mso]>
+                                                         <v:roundrect
+                                                            xmlns_v="urn:schemas-microsoft-com:vml"
+                                                            xmlns_w="urn:schemas-microsoft-com:office:word" href="https://example.com/18" style="height: 28.5pt; width: 93.8pt; v-text-anchor: middle;" arcsize="14%" strokecolor="#dde0e1" fillcolor="#dde0e1">
+                                                            <w:anchorlock/>
+                                                            <center style="color: #1e5d7b; font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-weight: 600;">Learn more..</center>
+                                                         </v:roundrect>
+                                                      <![endif]-->
+
+                                                      <a class="link-corr button" href="https://example.com/18" target="_blank" style="font-size: 15px; font-weight: bold; text-decoration: none; display: inline-block; mso-hide: all;">
+                                                         BUY NOW
+                                                      </a>
+                                                   </td>
+
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+
+                                 </td>
+                              </tr>
+                           </table>
+
+                           <!--[if mso]>
+                              </td>
+                              </tr>
+                              </table>
+                           <![endif]-->
+
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+<!-- END THREE COLUMNS -->
+
+
+<!-- START FOUR COLUMNS -->
+            <tr>
+               <td style="padding: 0;">
+                  <table width="100%" style="border-spacing: 0; background-color: #FB8A54;" role="presentation">
+                     <tr>
+                        <td style="padding: 1.4px; background: linear-gradient(#F26622, #F26622); background-color: #F26622;"></td>
+                     </tr>
+                     <tr>
+                        <td class="column-wrapper" style="padding: 10px 0; font-size: 0; text-align: center;">
+
+                           <!--[if mso]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="150" valign="middle" style="padding: 0;">
+                           <![endif]-->
+
+                           <table class="column column-one-fourth" style="border-spacing: 0; vertical-align: middle; width: 100%;max-width: 150px; display: inline-block;" role="presentation">
+                              <tr>
+                                 <td>
+
+                                    <table class="content" style="border-spacing: 0; text-align: center;" role="presentation">
+                                       <tr>
+                                          <td style="padding: 15px;">
+
+                                             <!--[if mso]>
+                                                <v:roundrect stroke="false" style="width:90pt; height:45pt;" arcsize="7%">
+                                                   <v:fill sizes="90pt,45pt" type="frame" src="https://mcusercontent.com/474f5b70c3b324277323d4c42/images/9532d872-1d92-78d5-5e51-3db12b47a802.jpg" href="http://example.com/19">
+                                                   <w:anchorlock/>
+                                                </v:roundrect>
+                                             <![endif]-->
+
+                                             <a href="https://example.com/19" target="_blank" style="mso-hide: all;">
+                                                <img src="images/arctix-logo1.jpg" alt="Gmail" width="120" style="max-width: 120px; border-radius: 5px; border: 0;">
+                                             </a>
+
+                                          </td>
+                                       </tr>
+                                    </table>
+
+                                 </td>
+                              </tr>
+                           </table>
+
+                           <!--[if mso]>
+                           </td><td width="150" valign="top" style="padding: 0;">
+                           <![endif]-->
+
+                           <table class="column column-one-fourth" style="border-spacing: 0; vertical-align: middle; width: 100%;max-width: 150px; display: inline-block;" role="presentation">
+                              <tr>
+                                 <td>
+
+                                    <table class="content" style="border-spacing: 0; text-align: center;" role="presentation">
+                                       <tr>
+                                          <td style="padding: 15px;">
+
+                                             <!--[if mso]>
+                                                <v:roundrect stroke="false" style="width:90pt; height:45pt;" arcsize="7%">
+                                                   <v:fill sizes="90pt,45pt" type="frame" src="images/carhartt1.jpg" href="http://example.com/20">
+                                                   <w:anchorlock/>
+                                                </v:roundrect>
+                                             <![endif]-->
+
+                                             <a href="https://example.com/20" target="_blank" style="mso-hide: all;">
+                                                <img src="images/carhartt1.jpg" alt="iCloud" width="120" style="max-width: 120px; border-radius: 5px; border: 0;">
+                                             </a>
+
+                                          </td>
+                                       </tr>
+                                    </table>
+
+                                 </td>
+                              </tr>
+                           </table>
+
+                           <!--[if mso]>
+                           </td><td width="150" valign="top" style="padding: 0;">
+                           <![endif]-->
+
+                           <table class="column column-one-fourth" style="border-spacing: 0; vertical-align: middle; width: 100%;max-width: 150px; display: inline-block;" role="presentation">
+                              <tr>
+                                 <td>
+
+                                    <table class="content" style="border-spacing: 0; text-align: center;" role="presentation">
+                                       <tr>
+                                          <td style="padding: 15px;">
+
+                                             <!--[if mso]>
+                                                <v:roundrect stroke="false" style="width:90pt; height:45pt;" arcsize="7%">
+                                                   <v:fill sizes="90pt,45pt" type="frame" src="images/rei-coop1.jpg" href="http://example.com/21">
+                                                   <w:anchorlock/>
+                                                </v:roundrect>
+                                             <![endif]-->
+
+                                             <a href="https://example.com/21" target="_blank" style="mso-hide: all;">
+                                                <img src="images/rei-coop1.jpg" alt="Outlook" width="120" style="max-width: 120px; border-radius: 5px; border: 0;">
+                                             </a>
+
+                                          </td>
+                                       </tr>
+                                    </table>
+
+                                 </td>
+                              </tr>
+                           </table>
+
+                           <!--[if mso]>
+                           </td><td width="150" valign="top" style="padding: 0;">
+                           <![endif]-->
+
+                           <table class="column column-one-fourth" style="border-spacing: 0; vertical-align: middle; width: 100%;max-width: 150px; display: inline-block;" role="presentation">
+                              <tr>
+                                 <td>
+
+                                    <table class="content" style="border-spacing: 0; text-align: center;" role="presentation">
+                                       <tr>
+                                          <td style="padding: 15px;">
+
+                                             <!--[if mso]>
+                                                <v:roundrect stroke="false" style="width:90pt; height:45pt;" arcsize="7%">
+                                                   <v:fill sizes="90pt,45pt" type="frame" src="images/conde-nast1.jpg" href="http://example.com/22">
+                                                   <w:anchorlock/>
+                                                </v:roundrect>
+                                             <![endif]-->
+
+                                             <a href="https://example.com/22" target="_blank" style="mso-hide: all;">
+                                                <img src="images/conde-nast1.jpg" alt="Yahoo" width="120" style="max-width: 120px; border-radius: 5px; border: 0;">
+                                             </a>
+
+                                          </td>
+                                       </tr>
+                                    </table>
+
+                                 </td>
+                              </tr>
+                           </table>
+
+                           <!--[if mso]>
+                              </td>
+                              </tr>
+                              </table>
+                           <![endif]-->
+
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+<!-- END FOUR COLUMNS -->
+
+
+<!-- START FOOTER -->
+            <tr>
+               <td style="background: linear-gradient(#3d3d3d, #3d3d3d); background-color: #3d3d3d; padding: 0;">
+                  <table width="100%" style="border-spacing: 0;" role="presentation">
+                  
+                     <tr>
+                        <td style="padding: 1.4px; background: linear-gradient(#F26622, #F26622); background-color: #F26622;"></td>
+                     </tr>
+                     <tr>
+                        <td style="padding: 55px 0 11px; text-align: center;">
+                           
+                           <a href="https://example.com/23" target="_blank">
+                              <img src="images/massif.png" alt="Logo 2" width="241" style="border: 0;">
+                           </a>
+
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="padding: 11px 0; color: #ffffff; text-align: center; font-size: 16px;">
+                        
+                           <div class="gmail-blend-screen">
+                              <div class="gmail-blend-difference">
+
+                                 <p style="font-size: 16px; margin: 0;">Sturdy Outdoor Clothing</p>
+
+                              </div>
+                           </div>
+
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="padding: 11px 0; color: #ffffff; text-align: center; font-size: 16px;">
+                        
+                           <div class="gmail-blend-screen">
+                              <div class="gmail-blend-difference">
+
+                                 <p style="font-size: 16px; margin: 0;">123&#8203; Street Road, City, State 55555</p>
+
+                              </div>
+                           </div>
+                           <!--[if mso]>
+                              <div style="font-size: 0; mso-line-height-rule: exactly; line-height: 0; display: none; mso-hide: all;">
+                                 &zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;
+                              </div>
+                           <![endif]-->
+
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="padding: 11px 0; color: #ffffff; text-align: center; font-size: 16px;">
+                        
+                           <div class="gmail-blend-screen">
+                              <div class="gmail-blend-difference">
+
+                                 <p style="font-size: 16px; margin: 0;">
+                                 <a href="mailto:email@example.com" style="text-decoration: none; color: #ffffff; color: inherit;">email&#8203;@massif.com</a>
+                                 </p>
+
+                              </div>
+                           </div>
+
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="padding: 11px 0; color: #ffffff; text-align: center; font-size: 16px;">
+                        
+                           <div class="gmail-blend-screen">
+                              <div class="gmail-blend-difference">
+
+                                 <p style="font-size: 16px; margin: 0;">
+                                 <a href="tel:18008888888" style="text-decoration: none; color: #ffffff; color: inherit;">1&#8203;-800-888-8888</a>
+                                 </p>
+
+                              </div>
+                           </div>
+
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="padding: 10px 0 65px; color: #ffffff; text-align: center; font-size: 13px;">
+                        
+                           <div class="gmail-blend-screen">
+                              <div class="gmail-blend-difference">
+
+                                 <p style="font-size: 13px; margin: 0;">
+                                 <a href="https://example.com/24" style="text-decoration: none; color: #ffffff; color: inherit; font-size: 13px;">UNSUBSCRIBE</a>
+                                 </p>
+
+                              </div>
+                           </div>
+
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="padding: 1.8px; background: linear-gradient(#F26622, #F26622); background-color: #F26622;"></td>
+                     </tr>
+                  
+                  </table>
+               </td>
+            </tr>
+<!-- END FOOTER -->
 
 
          </table>
 
          <!--[if mso]>
-            </td>
-            </tr>
-            </table>
+         </td>
+         </tr>
+         </table>
          <![endif]-->
       
       </div>
@@ -188,3 +1067,115 @@
 
 </body>
 </html>
+
+
+<!--
+IMGBB, MailChimp & GitHub Course Project Images
+
+Facebook Icon:
+https://i.ibb.co/5cp6Gtb/facebook.png
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/a14ef44e-fdb2-3a1c-28f4-c1e1043e407a.png
+https://raw.githubusercontent.com/w3newbie/html-email-mastery-images/main/course-project/facebook.png
+
+Twitter X Icon:
+https://i.ibb.co/9t8P92t/twitterx.png
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/55204969-d9cc-9dc9-d3c9-81bec7429833.png
+https://raw.githubusercontent.com/w3newbie/html-email-mastery-images/main/course-project/twitterx.png
+
+Black Twitter X Icon:
+https://i.ibb.co/BV3ktgn/x-circle.png
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/e9c79cbe-de10-a5af-184e-7503a19a63fb.png
+https://raw.githubusercontent.com/w3newbie/html-email-mastery-images/main/course-project/x-circle.png
+
+YouTube Icon:
+https://i.ibb.co/Ttf0YmH/youtube.png
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/b24e2cfa-e8a2-999a-67d9-5f073f94c3cc.png
+https://raw.githubusercontent.com/w3newbie/html-email-mastery-images/main/course-project/youtube.png
+
+Linkedin Icon:
+https://i.ibb.co/3zn6mW3/linkedin.png
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/e3fe30fa-46b2-6bc6-2630-d5f7f07f46ec.png
+https://raw.githubusercontent.com/w3newbie/html-email-mastery-images/main/course-project/linkedin.png
+
+Instagram Icon:
+https://i.ibb.co/8brZJJt/instagram.png
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/b1325253-f1ec-befd-a7f0-9e9413eb8793.png
+https://raw.githubusercontent.com/w3newbie/html-email-mastery-images/main/course-project/instagram.png
+
+Dark Logo:
+https://i.ibb.co/rx31TX7/html-email.png
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/f24fc6ce-1705-ef8d-2f5e-f4c029d4b197.png
+https://raw.githubusercontent.com/w3newbie/html-email-mastery-images/main/course-project/html-email.png
+
+Dark Logo with Border:
+https://i.ibb.co/s1nxLv6/html-email-border.png
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/819c4179-e2d4-dea4-110f-e1b527530029.png
+https://raw.githubusercontent.com/w3newbie/html-email-mastery-images/main/course-project/html-email-border.png
+https://i.ibb.co/4s64mcv/html-email-border-2.png
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/f97d943e-28df-bd5c-4e8a-357db0348271.png
+
+Banner Image:
+https://i.ibb.co/k4pFTrR/banner.jpg
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/252d4b47-c12b-109e-e2a3-d34580614528.jpg
+https://raw.githubusercontent.com/w3newbie/html-email-mastery-images/main/course-project/banner.jpg
+
+Banner GIF:
+https://i.ibb.co/hMhVbjT/stats2.gif
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/9cc2d79c-092b-91cf-d99a-cd05a99415fd.gif
+https://raw.githubusercontent.com/w3newbie/html-email-mastery-images/main/course-project/stats2.gif
+
+Man Teal:
+https://i.ibb.co/Tmg3qbV/man-teal.jpg
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/13008246-aff8-2851-c750-370e382db263.jpg
+https://raw.githubusercontent.com/w3newbie/html-email-mastery-images/main/course-project/man-teal.jpg
+
+Woman Teal:
+https://i.ibb.co/nQn29Sg/woman-teal.jpg
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/34393af4-503d-d5e0-4861-74f4fdcaf65e.jpg
+https://raw.githubusercontent.com/w3newbie/html-email-mastery-images/main/course-project/woman-teal.jpg
+
+Woman Teal Circle:
+https://i.ibb.co/j852yw3/teal-circle.png
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/10ae33ec-8d1f-e539-f04e-84166c15e74f.png
+https://raw.githubusercontent.com/w3newbie/html-email-mastery-images/main/course-project/teal-circle.png
+
+Red Newsletter:
+https://i.ibb.co/TRwJYjq/newsletter.jpg
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/30dfd342-60ab-6693-0372-f65c6d1311ad.jpg
+https://raw.githubusercontent.com/w3newbie/html-email-mastery-images/main/course-project/newsletter.jpg
+
+Yellow E-commerce:
+https://i.ibb.co/F8Rmvcz/ecommerce.jpg
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/70804ea0-bbf8-b16e-1ff3-5b2563ebe6a5.jpg
+https://raw.githubusercontent.com/w3newbie/html-email-mastery-images/main/course-project/ecommerce.jpg
+
+Teal/Blue Blogging:
+https://i.ibb.co/NymGnBV/blogging.jpg
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/0e95f758-d444-f22f-d475-4dde0da6d2a6.jpg
+https://raw.githubusercontent.com/w3newbie/html-email-mastery-images/main/course-project/blogging.jpg
+
+Gmail:
+https://i.ibb.co/P9pBr14/gmail.jpg
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/9532d872-1d92-78d5-5e51-3db12b47a802.jpg
+https://raw.githubusercontent.com/w3newbie/html-email-mastery-images/main/course-project/gmail.jpg
+
+iCloud:
+https://i.ibb.co/JqGbVxD/icloud.jpg
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/595ae7c9-c54d-1045-69ac-136779667c60.jpg
+https://raw.githubusercontent.com/w3newbie/html-email-mastery-images/main/course-project/icloud.jpg
+
+Outlook:
+https://i.ibb.co/5KpjqYR/outlook.jpg
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/216cbb23-6c53-b747-c30b-2ef6d15c5b9d.jpg
+https://raw.githubusercontent.com/w3newbie/html-email-mastery-images/main/course-project/outlook.jpg
+
+Yahoo:
+https://i.ibb.co/8cpzpW0/yahoo.jpg
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/ff10ce83-13fb-011b-eaa4-1ca0913a4666.jpg
+https://raw.githubusercontent.com/w3newbie/html-email-mastery-images/main/course-project/yahoo.jpg
+
+Light Footer Logo:
+https://i.ibb.co/rdjLnjG/html-email-white.png
+https://mcusercontent.com/474f5b70c3b324277323d4c42/images/545fc2c7-d9b0-e5f7-2f96-84fb742a5a1a.png
+https://raw.githubusercontent.com/w3newbie/html-email-mastery-images/main/course-project/html-email-white.png
+-->
